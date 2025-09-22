@@ -57,15 +57,17 @@ export default function ItemList() {
 
   
   return (
-    <ul className="space-y-2">
-      {items.map((item, index) => (
-        <Item
-          key={index}
-          name={item.name}
-          quantity={item.quantity}
-          category={item.category}
-        />
-      ))}
-    </ul>
+    <div className="max-w-2xl mx-auto">
+      <ul className="space-y-3">
+        {items.map((item, index) => (
+          <Item
+            key={index}
+            name={item.name}
+            quantity={item.quantity}
+            category={item.category}
+          />
+        ))}
+      </ul>
+    </div>
   );
 }

@@ -11,7 +11,7 @@ export default function NewItem() {
   };
 
   return ( 
-  <div className="p-5 rounded-lg shadow-md border bg-gradient-to-br max-w-md mx-auto">
+    <div className="p-4 shadow-md border border-gray-800 bg-gradient-to-br w-[350px] from-purple-200 to-blue-200 rounded-lg">
     <h2 className="text-1xl mb-2 text-left text-gray-500">Quantity:{quantity}</h2>
   
     {/* Quantity */}
@@ -38,7 +38,7 @@ export default function NewItem() {
         +
       </button> 
     </div>
-    <p className="text-xs text-left  text-gray-500">Allowed Range : 1-20</p>
+    <p className="text-xs text-left text-gray-500">Allowed Range : 1-20</p>
     </div>
 );
 }

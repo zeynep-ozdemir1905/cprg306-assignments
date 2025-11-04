@@ -12,9 +12,6 @@ export default function Page() {
         {!user ? (
           <>
             <h1 className="text-3xl font-bold mb-6">Welcome to Shopping List</h1>
-            <p className="mb-6 text-lg">
-              Manage your grocery items and explore meal ideas effortlessly.
-            </p>
             <button
               onClick={gitHubSignIn}
               className="bg-white text-purple-700 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-purple-100 transition"
@@ -35,7 +32,7 @@ export default function Page() {
               </Link>
               <button
                 onClick={firebaseSignOut}
-                className="bg-red-400 hover:bg-red-600 text-white font-semibold px-6 py-3 rounded-full shadow-md transition"
+                className="bg-red-300 hover:bg-red-400 text-white font-semibold px-6 py-3 rounded-full shadow-md transition"
               >
                 Sign Out
               </button>

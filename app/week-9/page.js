@@ -1,43 +1,48 @@
 "use client";
+
 import Link from "next/link";
-import { AuthContextProvider } from "./_utils/auth-context";
+import { useUserAuth } from "./_utils/auth-context";
 
 export default function Page() {
   const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
 
   return (
-    <main className="p-4 text-center text-white">
-      {!user ? (
-        <>
-          <h1 className="text-2xl font-bold mb-4">Welcome to Shopping List</h1>
-          <button
-            onClick={gitHubSignIn}
-            className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded"
-          >
-            Sign in with GitHub
-          </button>
-        </>
-      ) : (
-        <>
-          <p className="mb-4">
-            Welcome, {user.displayName} ({user.email})
-          </p>
-          <button
-            onClick={firebaseSignOut}
-            className="bg-gray-500 hover:bg-gray-600 px-4 py-2 rounded mb-4"
-          >
-            Sign Out
-          </button>
-          <div>
-            <Link
-              href="/week-9/shopping-list"
-              className="underline text-blue-300 hover:text-blue-400"
+    <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-600 to-blue-500 p-4">
+      <div className="bg-white bg-opacity-20 backdrop-blur-md rounded-3xl shadow-xl p-10 max-w-md w-full text-center text-white">
+        {!user ? (
+          <>
+            <h1 className="text-3xl font-bold mb-6">Welcome to Shopping List</h1>
+            <p className="mb-6 text-lg">
+              Manage your grocery items and explore meal ideas effortlessly.
+            </p>
+            <button
+              onClick={gitHubSignIn}
+              className="bg-white text-purple-700 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-purple-100 transition"
             >
-              Go to Shopping List
-            </Link>
-          </div>
-        </>
-      )}
+              Sign in with GitHub
+            </button>
+          </>
+        ) : (
+          <>
+            <h1 className="text-2xl font-bold mb-4">Welcome, {user.displayName}!</h1>
+            <p className="mb-6 text-lg">{user.email}</p>
+            <div className="flex flex-col gap-4">
+              <Link
+                href="/week-9/shopping-list"
+                className="bg-white text-purple-700 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-purple-100 transition"
+              >
+                Go to Shopping List
+              </Link>
+              <button
+                onClick={firebaseSignOut}
+                className="bg-red-400 hover:bg-red-600 text-white font-semibold px-6 py-3 rounded-full shadow-md transition"
+              >
+                Sign Out
+              </button>
+            </div>
+          </>
+        )}
+      </div>
     </main>
   );
 }

@@ -8,10 +8,10 @@ export default function Page() {
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-600 to-blue-500 p-4">
-      <div className="bg-white bg-opacity-20 backdrop-blur-md rounded-3xl shadow-xl p-10 max-w-md w-full text-center text-white">
+      <div className="bg-white bg-opacity-20 backdrop-blur-md rounded-3xl shadow-xl p-10 max-w-md w-full text-center text-black">
         {!user ? (
           <>
-            <h1 className="text-3xl font-bold mb-6">Welcome to Shopping List</h1>
+            <h1 className="text-3xl font-bold mb-6">Sign in to view Shopping List</h1>
             <button
               onClick={gitHubSignIn}
               className="bg-white text-purple-700 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-purple-100 transition"
@@ -22,17 +22,17 @@ export default function Page() {
         ) : (
           <>
             <h1 className="text-2xl font-bold mb-4">Welcome, {user.displayName}!</h1>
-            <p className="mb-6 text-lg">{user.email}</p>
+            <p className="mb-6 text-sm">{user.email}</p>
             <div className="flex flex-col gap-4">
               <Link
                 href="/week-9/shopping-list"
-                className="bg-white text-purple-700 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-purple-100 transition"
+                className="bg-white border-2 text-purple-700 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-purple-100 transition"
               >
                 Go to Shopping List
               </Link>
               <button
                 onClick={firebaseSignOut}
-                className="bg-red-300 hover:bg-red-400 text-white font-semibold px-6 py-3 rounded-full shadow-md transition"
+                className="bg-red-300 hover:bg-red-400 border-2 text-white font-semibold px-6 py-3 rounded-full shadow-md transition"
               >
                 Sign Out
               </button>

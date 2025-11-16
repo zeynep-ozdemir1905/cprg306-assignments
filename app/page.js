@@ -14,14 +14,12 @@ export default function RootPage() {
     <Link href="/week-5" className="p-3 border rounded-md shadow-sm bg-purple-200">Go to Week 5 ↓</Link>
     <Link href="/week-6" className="p-3 border rounded-md shadow-sm bg-blue-200">Go to Week 6↓</Link>  
     <Link href="/week-7" className="p-3 border rounded-md shadow-sm bg-orange-200">Go to Week 7↓</Link>  
-<<<<<<< Updated upstream
     <Link href="/week-8" className="p-3 border rounded-md shadow-sm bg-yellow-100">Go to Week 8↓</Link> 
     <Link href="/week-9" className="p-3 border rounded-md shadow-sm bg-red-200">Go to Week 9↓</Link>
-=======
     <Link href="/week-8" className="p-3 border rounded-md shadow-sm bg-yellow-100">Go to Week 8↓</Link>  
     <Link href="/week-9" className="p-3 border rounded-md shadow-sm bg-red-200">Go to Week 9↓</Link>
     <Link href="/week-10" className="p-3 border rounded-md shadow-sm bg-teal-200">Go to Week 10↓</Link>
->>>>>>> Stashed changes
+
 
   
   </div>

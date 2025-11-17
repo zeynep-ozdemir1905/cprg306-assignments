@@ -14,7 +14,7 @@ export default function Page() {
             <h1 className="text-3xl font-bold mb-6">Welcome to Week 10!!!!</h1>
             <button
               onClick={gitHubSignIn}
-              className="bg-gray text-pink-500 font-semibold px-6 py-3 shadow-md border-amber-300 hover:bg-purple-100 transition"
+              className="bg-gray text-pink-500 font-semibold px-6 py-3 shadow-md hover:bg-purple-100 transition"
             >
               Sign in with GitHub
             </button>

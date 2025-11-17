@@ -10,16 +10,15 @@ import { collection, getDocs, addDoc, query } from "firebase/firestore";
  */
 export async function getItems(userId) {
   try {
-    // Reference to the items subcollection for the user
+    
     const itemsCol = collection(db, "users", userId, "items");
     
-    // Optional: add query here if needed
-    const q = query(itemsCol);
+   
 
-    // Fetch all documents in the subcollection
+    
     const snapshot = await getDocs(q);
 
-    // Map each document to an object containing id and data
+    
     const items = snapshot.docs.map(doc => ({
       id: doc.id,
       ...doc.data()
